@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <style>
+
+        .tile-map-grid {
+            margin: 0 auto;
+            width: 850px;
+            height: 600px;
+            background-color: transparent;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+        
+        
+        a:link {
+        text-decoration: none;
+        color: #494d4d;
+        }
+
+        a:visited {
+        text-decoration: none;
+        color: #494d4d;
+        }
+
+        a:hover {
+        text-decoration: underline;
+        color: black;
+        }
+
+        a:active {
+        text-decoration: none;
+        color: #494d4d;
+        }
+
+        .tile-wrapper {
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: 84px 84px 84px 84px 84px 84px 84px 84px 84px;
+                background-color: transparent;
+                color: #444;
+                width: 99%;
+                padding: 10px;
+                overflow: auto;
+            }
+        
+            .tile-box {
+                background-color: #eff0f7;
+                color: #494d4d;
+                border: 1px solid rgba(0,0,0,0.2);
+                border-radius: 12px;
+                box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.4);
+                padding: 25px 2px;
+                font-size: 12px;
+                font-weight: 700;
+                font-family: system-ui, -apple-system, Roboto, "Helvetica Neue", sans-serif;
+                text-align: center;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;    
+            }
+
+            .null {
+                background-color: transparent;
+                color: lightgray;
+                border: 0px solid rgba(0,0,0,0.2);
+                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+            }
+
+            .ab {
+            grid-column: 3 / 4;
+            grid-row: 4 / 5;
+            }
+            .ad {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            }
+            .ag {
+            grid-column: 5 / 6;
+            grid-row: 5 / 6;
+            }
+            .bc {
+            grid-column: 7 / 8;
+            grid-row: 3 / 4;
+            }
+            .bh {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            }
+            .bn {
+            grid-column: 5 / 6;
+            grid-row: 2 / 3;
+            }
+            .bt {
+            grid-column: 7 / 8;
+            grid-row: 1 / 2;
+            }
+            .br {
+            grid-column: 8 / 9;
+            grid-row: 5 / 6;
+            }
+            .bv {
+            grid-column: 5 / 6;
+            grid-row: 4 / 5;
+            }
+            .b {
+            grid-column: 6 / 7;
+            grid-row: 6 / 7;
+            }
+            .bz {
+            grid-column: 7 / 8;
+            grid-row: 5 / 6;
+            }
+            .cl {
+            grid-column: 7 / 8;
+            grid-row: 7 / 8;
+            }
+            .cs {
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
+            }
+            .cj {
+            grid-column: 4 / 5;
+            grid-row: 3 / 4;
+            }
+            .ct {
+            grid-column: 9 / 10;
+            grid-row: 6 / 7;
+            }
+            .cv {
+            grid-column: 6 / 7;
+            grid-row: 4 / 5;
+            }
+            .db {
+            grid-column: 5 / 6;
+            grid-row: 6 / 7;
+            }
+            .dj {
+            grid-column: 4 / 5;
+            grid-row: 6 / 7;
+            }
+            .gl {
+            grid-column: 8 / 9;
+            grid-row: 4 / 5;
+            }
+            .gr {
+            grid-column: 6 / 7;
+            grid-row: 7 / 8;
+            }
+            .gj {
+            grid-column: 3 / 4;
+            grid-row: 5 / 6;
+            }
+            .hr {
+            grid-column: 6 / 7;
+            grid-row: 3 / 4;
+            }
+            .hd {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+            }
+            .il {
+            grid-column: 8 / 9;
+            grid-row: 6 / 7;
+            }
+            .is {
+            grid-column: 8 / 9;
+            grid-row: 2 / 3;
+            }
+            .if {
+            grid-column: 7 / 8;
+            grid-row: 6 / 7;
+            }
+            .mm {
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            }
+            .mh {
+            grid-column: 3 / 4;
+            grid-row: 6 / 7;
+            }
+            .ms {
+            grid-column: 5 / 6;
+            grid-row: 3 / 4;
+            }
+            .nt {
+            grid-column: 7 / 8;
+            grid-row: 2 / 3;
+            }
+            .ot {
+            grid-column: 4 / 5;
+            grid-row: 7 / 8;
+            }
+            .ph {
+            grid-column: 6 / 7;
+            grid-row: 5 / 6;
+            }
+            .sj {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+            }
+            .sm {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            }
+            .sb {
+            grid-column: 4 / 5;
+            grid-row: 4 / 5;
+            }
+            .sv {
+            grid-column: 6 / 7;
+            grid-row: 2 / 3;
+            }
+            .tr {
+            grid-column: 5 / 6;
+            grid-row: 7 / 8;
+            }
+            .tm {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            }
+            .tl {
+            grid-column: 9 / 10;
+            grid-row: 5 / 6;
+            }
+            .vl {
+            grid-column: 4 / 5;
+            grid-row: 5 / 6;
+            }
+            .vs {
+            grid-column: 8 / 9;
+            grid-row: 3 / 4;
+            }
+            .vn {
+            grid-column: 7 / 8;
+            grid-row: 4 / 5;
+            }
+            
+    </style>
+
+    <div class="tile-map-grid">
+        
+
+        <div class="tile-wrapper">
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box null"></div>
+            <div class="tile-box ab"><a href="https://egas-consulting.github.io/apa/ALBA.html">ALBA</a></div>
+            <div class="tile-box ad"><a href="https://egas-consulting.github.io/apa/ARAD.html">ARAD</a></div>
+            <div class="tile-box ag"><a href="https://egas-consulting.github.io/apa/ARGES.html">ARGEȘ</a></div>
+            <div class="tile-box bc"><a href="https://egas-consulting.github.io/apa/BACAU.html">BACĂU</a></div>
+            <div class="tile-box bh"><a href="https://egas-consulting.github.io/apa/BIHOR.html">BIHOR</a></div>
+            <div class="tile-box bn"><a href="https://egas-consulting.github.io/apa/BISTRITA-NASAUD.html">BISTRIȚA-NĂSĂUD</a></div>
+            <div class="tile-box bt"><a href="https://egas-consulting.github.io/apa/BOTOSANI.html">BOTOȘANI</a></div>
+            <div class="tile-box br"><a href="https://egas-consulting.github.io/apa/BRAILA.html">BRĂILA</a></div>
+            <div class="tile-box bv"><a href="https://egas-consulting.github.io/apa/BRASOV.html">BRAȘOV</a></div>
+            <div class="tile-box b"><a href="">BUCUREȘTI</a></div>
+            <div class="tile-box bz"><a href="https://egas-consulting.github.io/apa/BUZAU.html">BUZĂU</a></div>
+            <div class="tile-box cl"><a href="https://egas-consulting.github.io/apa/CALARASI.html">CĂLĂRAȘI</a></div>
+            <div class="tile-box cs"><a href="https://egas-consulting.github.io/apa/CARAS-SEVERIN.html">CARAȘ-SEVERIN</a></div>
+            <div class="tile-box cj"><a href="https://egas-consulting.github.io/apa/CLUJ.html">CLUJ</a></div>
+            <div class="tile-box ct"><a href="https://egas-consulting.github.io/apa/CONSTANTA.html">CONSTANȚA</a></div>
+            <div class="tile-box cv"><a href="https://egas-consulting.github.io/apa/COVASNA.html">COVASNA</a></div>
+            <div class="tile-box db"><a href="https://egas-consulting.github.io/apa/DAMBOVITA.html">DÂMBOVIȚA</a></div>
+            <div class="tile-box dj"><a href="https://egas-consulting.github.io/apa/DOLJ.html">DOLJ</a></div>
+            <div class="tile-box gl"><a href="https://egas-consulting.github.io/apa/GALATI.html">GALAȚI</a></div>
+            <div class="tile-box gr"><a href="https://egas-consulting.github.io/apa/GIURGIU.html">GIURGIU</a></div>
+            <div class="tile-box gj"><a href="https://egas-consulting.github.io/apa/GORJ.html">GORJ</a></div>
+            <div class="tile-box hr"><a href="https://egas-consulting.github.io/apa/HARGHITA.html">HARGHITA</a></div>
+            <div class="tile-box hd"><a href="https://egas-consulting.github.io/apa/HUNEDOARA.html">HUNEDOARA</a></div>
+            <div class="tile-box il"><a href="https://egas-consulting.github.io/apa/IALOMITA.html">IALOMIȚA</a></div>
+            <div class="tile-box is"><a href="https://egas-consulting.github.io/apa/IASI.html">IAȘI</a></div>
+            <div class="tile-box if"><a href="https://egas-consulting.github.io/apa/ILFOV.html">ILFOV</a></div>
+            <div class="tile-box mm"><a href="https://egas-consulting.github.io/apa/MARAMURES.html">MARAMUREȘ</a></div>
+            <div class="tile-box mh"><a href="https://egas-consulting.github.io/apa/MEHEDINTI.html">MEHEDINȚI</a></div>
+            <div class="tile-box ms"><a href="https://egas-consulting.github.io/apa/MURES.html">MUREȘ</a></div>
+            <div class="tile-box nt"><a href="https://egas-consulting.github.io/apa/NEAMT.html">NEAMȚ</a></div>
+            <div class="tile-box ot"><a href="https://egas-consulting.github.io/apa/OLT.html">OLT</a></div>
+            <div class="tile-box ph"><a href="https://egas-consulting.github.io/apa/PRAHOVA.html">PRAHOVA</a></div>
+            <div class="tile-box sj"><a href="https://egas-consulting.github.io/apa/SALAJ.html">SĂLAJ</a></div>
+            <div class="tile-box sm"><a href="https://egas-consulting.github.io/apa/SATU-MARE.html">SATU MARE</a></div>
+            <div class="tile-box sb"><a href="https://egas-consulting.github.io/apa/SIBIU.html">SIBIU</a></div>
+            <div class="tile-box sv"><a href="https://egas-consulting.github.io/apa/SUCEAVA.html">SUCEAVA</a></div>
+            <div class="tile-box tr"><a href="https://egas-consulting.github.io/apa/TELEORMAN.html">TELEORMAN</a></div>
+            <div class="tile-box tm"><a href="https://egas-consulting.github.io/apa/TIMIS.html">TIMIȘ</a></div>
+            <div class="tile-box tl"><a href="https://egas-consulting.github.io/apa/TULCEA.html">TULCEA</a></div>
+            <div class="tile-box vl"><a href="https://egas-consulting.github.io/apa/VALCEA.html">VÂLCEA</a></div>
+            <div class="tile-box vs"><a href="https://egas-consulting.github.io/apa/VASLUI.html">VASLUI</a></div>
+            <div class="tile-box vn"><a href="https://egas-consulting.github.io/apa/VRANCEA.html">VRANCEA</a></div>
+            
+        </div>
+  
+  
+    </div>
+
+</body>
+</html>
