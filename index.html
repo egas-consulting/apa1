@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <style>
+
+        .tile-map-grid {
+            margin: 0 auto;
+            width: 670px;
+            height: 540px;
+            background-color: transparent;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+
+        }
+        
+        
+        a:link {
+        text-decoration: none;
+        color: #494d4d;
+        }
+
+        a:visited {
+        text-decoration: none;
+        color: #494d4d;
+        }
+
+        a:hover {
+        text-decoration: underline;
+        color: black;
+        }
+
+        a:active {
+        text-decoration: none;
+        color: #494d4d;
+        }
+        .title {
+            margin: 0 auto; 
+            width: 670px; 
+            background-color: transparent; 
+            padding: 10px 10px 0px 25px; 
+            display: flex; 
+            justify-content: left; 
+            align-items: center; 
+            overflow: auto; 
+            font-size: 20px; 
+            font-weight: 400; 
+            font-family: system-ui, -apple-system, Roboto, "Helvetica Neue", sans-serif; 
+            text-align: center;
+        }
+
+        .tile-wrapper {
+                display: grid;
+                grid-gap: 10px;
+                grid-template-columns: 84px 84px 84px 84px 84px 84px 84px;
+                background-color: transparent;
+                color: #444;
+                width: 99%;
+                padding: 10px;
+                overflow: auto;
+            }
+        
+            .tile-box {
+                background-color: #eff0f7;
+                color: #494d4d;
+                border: 2px solid rgba(0,0,0,0.01);
+                border-radius: 12px;
+                box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.4);
+                padding: 25px 2px;
+                font-size: 10px;
+                font-weight: 400;
+                font-family: system-ui, -apple-system, Roboto, "Helvetica Neue", sans-serif;
+                text-align: center;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;    
+            }
+            a:focus, a:hover {
+                text-decoration: none;
+            }
+
+            .block {
+            position: relative;
+            }
+
+            .block a[href]::after, .block button::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            }
+
+            .block:hover, .block:focus-within {
+            border: 2px solid rgba(0,0,0,0.5);
+            box-shadow: 0px 4px 6px 0px rgba(0,0,0,.55);
+            }
+
+
+            .null {
+                background-color: transparent;
+                color: lightgray;
+                border: 0px solid rgba(0,0,0,0.2);
+                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+            }
+
+            
+            
+    </style>
+
+    <div class="title"> Selectează județul:</div>
+    
+    <div class="tile-map-grid">
+        
+
+        <div class="tile-wrapper">
+            <div class="tile-box block ab"><a href="https://egas-consulting.github.io/apa/ALBA.html"><span style="font-size: 40px; font-weight: 700;">AB</span><br>ALBA</a></div>
+            <div class="tile-box block ad"><a href="https://egas-consulting.github.io/apa/ARAD.html"><span style="font-size: 40px; font-weight: 700;">AD</span><br>ARAD</a></div>
+            <div class="tile-box block ag"><a href="https://egas-consulting.github.io/apa/ARGES.html"><span style="font-size: 40px; font-weight: 700;">AG</span><br>ARGEȘ</a></div>
+            <div class="tile-box block bc"><a href="https://egas-consulting.github.io/apa/BACAU.html"><span style="font-size: 40px; font-weight: 700;">BC</span><br>BACĂU</a></div>
+            <div class="tile-box block bh"><a href="https://egas-consulting.github.io/apa/BIHOR.html"><span style="font-size: 40px; font-weight: 700;">BH</span><br>BIHOR</a></div>
+            <div class="tile-box block bn"><a href="https://egas-consulting.github.io/apa/BISTRITA-NASAUD.html"><span style="font-size: 40px; font-weight: 700;">BN</span><br>BISTRIȚA-NĂSĂUD</a></div>
+            <div class="tile-box block bt"><a href="https://egas-consulting.github.io/apa/BOTOSANI.html"><span style="font-size: 40px; font-weight: 700;">BT</span><br>BOTOȘANI</a></div>
+            <div class="tile-box block br"><a href="https://egas-consulting.github.io/apa/BRAILA.html"><span style="font-size: 40px; font-weight: 700;">BR</span><br>BRĂILA</a></div>
+            <div class="tile-box block bv"><a href="https://egas-consulting.github.io/apa/BRASOV.html"><span style="font-size: 40px; font-weight: 700;">BV</span><br>BRAȘOV</a></div>
+            <div class="tile-box block b"><a href="https://egas-consulting.github.io/apa/BUCURESTI.html"><span style="font-size: 40px; font-weight: 700;">B</span><br>BUCUREȘTI</a></div>
+            <div class="tile-box block bz"><a href="https://egas-consulting.github.io/apa/BUZAU.html"><span style="font-size: 40px; font-weight: 700;">BZ</span><br>BUZĂU</a></div>
+            <div class="tile-box block cl"><a href="https://egas-consulting.github.io/apa/CALARASI.html"><span style="font-size: 40px; font-weight: 700;">CL</span><br>CĂLĂRAȘI</a></div>
+            <div class="tile-box block cs"><a href="https://egas-consulting.github.io/apa/CARAS-SEVERIN.html"><span style="font-size: 40px; font-weight: 700;">CS</span><br>CARAȘ-SEVERIN</a></div>
+            <div class="tile-box block cj"><a href="https://egas-consulting.github.io/apa/CLUJ.html"><span style="font-size: 40px; font-weight: 700;">CJ</span><br>CLUJ</a></div>
+            <div class="tile-box block ct"><a href="https://egas-consulting.github.io/apa/CONSTANTA.html"><span style="font-size: 40px; font-weight: 700;">CT</span><br>CONSTANȚA</a></div>
+            <div class="tile-box block cv"><a href="https://egas-consulting.github.io/apa/COVASNA.html"><span style="font-size: 40px; font-weight: 700;">CV</span><br>COVASNA</a></div>
+            <div class="tile-box block db"><a href="https://egas-consulting.github.io/apa/DAMBOVITA.html"><span style="font-size: 40px; font-weight: 700;">DB</span><br>DÂMBOVIȚA</a></div>
+            <div class="tile-box block dj"><a href="https://egas-consulting.github.io/apa/DOLJ.html"><span style="font-size: 40px; font-weight: 700;">DJ</span><br>DOLJ</a></div>
+            <div class="tile-box block gl"><a href="https://egas-consulting.github.io/apa/GALATI.html"><span style="font-size: 40px; font-weight: 700;">GL</span><br>GALAȚI</a></div>
+            <div class="tile-box block gr"><a href="https://egas-consulting.github.io/apa/GIURGIU.html"><span style="font-size: 40px; font-weight: 700;">GR</span><br>GIURGIU</a></div>
+            <div class="tile-box block gj"><a href="https://egas-consulting.github.io/apa/GORJ.html"><span style="font-size: 40px; font-weight: 700;">GJ</span><br>GORJ</a></div>
+            <div class="tile-box block hr"><a href="https://egas-consulting.github.io/apa/HARGHITA.html"><span style="font-size: 40px; font-weight: 700;">HR</span><br>HARGHITA</a></div>
+            <div class="tile-box block hd"><a href="https://egas-consulting.github.io/apa/HUNEDOARA.html"><span style="font-size: 40px; font-weight: 700;">HD</span><br>HUNEDOARA</a></div>
+            <div class="tile-box block il"><a href="https://egas-consulting.github.io/apa/IALOMITA.html"><span style="font-size: 40px; font-weight: 700;">IL</span><br>IALOMIȚA</a></div>
+            <div class="tile-box block is"><a href="https://egas-consulting.github.io/apa/IASI.html"><span style="font-size: 40px; font-weight: 700;">IS</span><br>IAȘI</a></div>
+            <div class="tile-box block if"><a href="https://egas-consulting.github.io/apa/ILFOV.html"><span style="font-size: 40px; font-weight: 700;">IF</span><br>ILFOV</a></div>
+            <div class="tile-box block mm"><a href="https://egas-consulting.github.io/apa/MARAMURES.html"><span style="font-size: 40px; font-weight: 700;">MM</span><br>MARAMUREȘ</a></div>
+            <div class="tile-box block mh"><a href="https://egas-consulting.github.io/apa/MEHEDINTI.html"><span style="font-size: 40px; font-weight: 700;">MH</span><br>MEHEDINȚI</a></div>
+            <div class="tile-box block ms"><a href="https://egas-consulting.github.io/apa/MURES.html"><span style="font-size: 40px; font-weight: 700;">MS</span><br>MUREȘ</a></div>
+            <div class="tile-box block nt"><a href="https://egas-consulting.github.io/apa/NEAMT.html"><span style="font-size: 40px; font-weight: 700;">NT</span><br>NEAMȚ</a></div>
+            <div class="tile-box block ot"><a href="https://egas-consulting.github.io/apa/OLT.html"><span style="font-size: 40px; font-weight: 700;">OT</span><br>OLT</a></div>
+            <div class="tile-box block ph"><a href="https://egas-consulting.github.io/apa/PRAHOVA.html"><span style="font-size: 40px; font-weight: 700;">PH</span><br>PRAHOVA</a></div>
+            <div class="tile-box block sj"><a href="https://egas-consulting.github.io/apa/SALAJ.html"><span style="font-size: 40px; font-weight: 700;">SJ</span><br>SĂLAJ</a></div>
+            <div class="tile-box block sm"><a href="https://egas-consulting.github.io/apa/SATU-MARE.html"><span style="font-size: 40px; font-weight: 700;">SM</span><br>SATU MARE</a></div>
+            <div class="tile-box block sb"><a href="https://egas-consulting.github.io/apa/SIBIU.html"><span style="font-size: 40px; font-weight: 700;">SB</span><br>SIBIU</a></div>
+            <div class="tile-box block sv"><a href="https://egas-consulting.github.io/apa/SUCEAVA.html"><span style="font-size: 40px; font-weight: 700;">SV</span><br>SUCEAVA</a></div>
+            <div class="tile-box block tr"><a href="https://egas-consulting.github.io/apa/TELEORMAN.html"><span style="font-size: 40px; font-weight: 700;">TR</span><br>TELEORMAN</a></div>
+            <div class="tile-box block tm"><a href="https://egas-consulting.github.io/apa/TIMIS.html"><span style="font-size: 40px; font-weight: 700;">TM</span><br>TIMIȘ</a></div>
+            <div class="tile-box block tl"><a href="https://egas-consulting.github.io/apa/TULCEA.html"><span style="font-size: 40px; font-weight: 700;">TL</span><br>TULCEA</a></div>
+            <div class="tile-box block vl"><a href="https://egas-consulting.github.io/apa/VALCEA.html"><span style="font-size: 40px; font-weight: 700;">VL</span><br>VÂLCEA</a></div>
+            <div class="tile-box block vs"><a href="https://egas-consulting.github.io/apa/VASLUI.html"><span style="font-size: 40px; font-weight: 700;">VS</span><br>VASLUI</a></div>
+            <div class="tile-box block vn"><a href="https://egas-consulting.github.io/apa/VRANCEA.html"><span style="font-size: 40px; font-weight: 700;">VN</span><br>VRANCEA</a></div>
+            
+        </div>
+  
+  
+    </div>
+    
+
+</body>
+</html>
